@@ -10,13 +10,15 @@
 function App() {
   return (
     <div className="app">
-      <Header></Header>
       <Router>
+        <Header></Header>
+        <div className="container">
         <Routes>
         <Route path="/" element={<Home />}/> 
         <Route path="/movie/:imdbID" element={<MovieDetail />} />
         <Route element={<PageNotFound />}/>
         </Routes>
+        </div>
         <Footer />
       </Router>
     </div>
